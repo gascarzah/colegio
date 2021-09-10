@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:panel header="Observaciones">
+		<table>
+			<tr>
+				<td><p:graphicImage
+						value="/recursos/imagenes/alumnos/CARPITO.png" width="120"
+						height="120"></p:graphicImage></td>
+
+				<td>
+					<div align="right">
+						<h:panelGroup layout="block">
+
+							<p:inputTextarea rows="6" cols="50" counter="display" value="#{matriculaBean.matricula.observ}"
+								maxlength="500" counterTemplate="{0} maximo  caracteres" />
+							<p:outputLabel id="display" />
+
+						</h:panelGroup>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</p:panel>
+
+</ui:composition>

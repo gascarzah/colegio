@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+
+	<div id="registroMadre">
+<p:panel header="Registro Madre">
+		<p:panelGrid>
+			<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.dni']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.dni}"></p:inputText>
+				</p:column>
+				<p:column>
+					<p:outputLabel value="#{msg['global.nombres']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.nombres}"></p:inputText>
+				</p:column>
+				</p:row>
+				<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.apepaterno']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.apePate}"></p:inputText>
+				</p:column>
+				<p:column>
+					<p:outputLabel value="#{msg['global.apematerno']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.apeMate}"></p:inputText>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.fechaNacimiento']}" locale="es" pattern="dd/MM/yyyy"/>
+				</p:column>
+				<p:column>
+					<p:calendar value="#{matriculaBean.madre.fecNaci}"></p:calendar>
+				</p:column>
+
+				<p:column>
+					<p:outputLabel value="#{msg['global.telefono']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.telefono}"></p:inputText>
+				</p:column>
+				</p:row>
+				<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.email']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.email}"></p:inputText>
+				</p:column>
+				<p:column>
+					<p:outputLabel value="#{msg['global.estado.civil']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.estadoCivil}"></p:inputText>
+				</p:column>
+			</p:row>
+
+			<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.celular']}"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{matriculaBean.madre.telefono}"></p:inputText>
+				</p:column>
+
+				<p:column>
+					<p:outputLabel value="#{msg['global.direccion']}"/>
+				</p:column>
+				<p:column colspan="3">
+					<p:inputText value="#{matriculaBean.madre.direccion}"
+						style="width :100%"></p:inputText>
+				</p:column>
+			</p:row>
+
+		</p:panelGrid>
+</p:panel>
+
+
+	</div>
+
+</html>

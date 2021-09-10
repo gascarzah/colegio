@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div id="registroAlumno" align="center">
+	<p:panel header="Registro Alumno">
+			<p:panelGrid>
+			<p:row>
+				<p:column>
+					<p:outputLabel value="#{msg['global.nivel']}"></p:outputLabel>
+				</p:column>
+				<p:column>
+					<p:selectOneMenu id="idAulaNivel"
+						value="#{matriculaBean.nivel.maesId}"
+						style="width: 110px !important;" effect="drop">
+						<f:selectItem itemLabel="Seleccione" itemValue="-1" noSelectionOption="true" />
+						<f:selectItems value="#{matriculaBean.niveles}" var="nivel"
+							itemValue="#{nivel.maesId}" itemLabel="#{nivel.valor}" />
+						<p:ajax listener="#{matriculaBean.buscarGrados}" update=":#{p:component('idAulaGrado')}"></p:ajax>	
+					</p:selectOneMenu>
+				</p:column>
+				<p:column>
+					<p:outputLabel value="#{msg['global.grado']}"></p:outputLabel>
+				</p:column>
+				<p:column>
+					<p:selectOneMenu id="idAulaGrado"
+						value="#{matriculaBean.grado.maesId}"
+						style="width: 110px !important;" effect="drop">
+						<f:selectItem itemLabel="Seleccione" itemValue="-1" noSelectionOption="true" />
+						<f:selectItems value="#{matriculaBean.grados}"  />
+					</p:selectOneMenu>
+				</p:column>
+			</p:row>
+				<p:row style="align : left">
+					<p:column>
+						<p:outputLabel value="DNI:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:inputText value="#{matriculaBean.alumno.dni}"></p:inputText>
+					</p:column>
+					<p:column>
+						<p:outputLabel value="Nombres:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:inputText value="#{matriculaBean.alumno.nombres}"></p:inputText>
+					</p:column>
+				</p:row>
+				<p:row>
+					<p:column>
+						<p:outputLabel value="Apellido Paterno:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:inputText value="#{matriculaBean.alumno.apePate}"></p:inputText>
+					</p:column>
+					<p:column>
+						<p:outputLabel value="Apellido Materno:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:inputText value="#{matriculaBean.alumno.apeMate}"></p:inputText>
+					</p:column>
+				</p:row>
+				<p:row>
+					<p:column>
+						<p:outputLabel value="Fecha Nacimiento:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:calendar value="#{matriculaBean.alumno.fecNaci}" locale="es" pattern="dd/MM/yyyy"></p:calendar>
+					</p:column>
+
+					<p:column>
+						<p:outputLabel value="Telefono:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:inputText value="#{matriculaBean.alumno.telefono}"></p:inputText>
+					</p:column>
+					</p:row>
+				<p:row>
+					<p:column>
+						<p:outputLabel value="Sexo:"></p:outputLabel>
+					</p:column>
+					<p:column>
+						<p:selectOneMenu id="idSexo"
+						value="#{matriculaBean.alumno.sexo}"
+						style="width: 110px !important;" effect="drop">
+						<f:selectItem itemLabel="Seleccione" itemValue="-1" noSelectionOption="true" />
+						
+						<f:selectItem itemLabel="HOMBRE" itemValue="23"  />
+						<f:selectItem itemLabel="MUJER" itemValue="24"  />
+					</p:selectOneMenu>
+						
+					</p:column>
+					
+					<p:column>
+						<p:outputLabel value="Email:"></p:outputLabel>
+					</p:column>
+					<p:column colspan="3">
+						<p:inputText value="#{matriculaBean.alumno.email}"></p:inputText>
+					</p:column>
+				</p:row>
+<!-- 				<p:row> -->
+<!-- 				<p:column> -->
+<!-- 						<p:outputLabel value="Direccion:"></p:outputLabel> -->
+<!-- 					</p:column> -->
+<!-- 					<p:column colspan="3"> -->
+<!-- 						<p:inputText value="#{matriculaBean.alumno.alumDirec}" -->
+<!-- 							style="width :100%"></p:inputText> -->
+<!-- 					</p:column> -->
+<!-- 				</p:row> -->
+				
+			</p:panelGrid>
+			</p:panel>
+<!-- 		<div id="botones" align="center"> -->
+				
+							
+<!-- 				<p:commandButton icon="ui-icon-disk" value="Grabar" disabled="#{matriculaBean.disableAgregar}" -->
+<!-- 					actionListener="#{matriculaBean.grabar}" update=":#{p:component('idDtAlumno')}"/> -->
+<!-- 				<p:commandButton icon="ui-icon-disk" value="Modificar" -->
+<!-- 							disabled="#{matriculaBean.disableModificar}" -->
+<!-- 							action="#{matriculaBean.actualizar}" -->
+<!-- 							update=":#{p:component('idDtAlumno')}" /> -->
+<!-- 			</div> -->
+	</div>
+
+</html>

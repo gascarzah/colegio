@@ -1,0 +1,7 @@
+package pe.gafahsoft.colegio.bean;
+
+import java.io.Serializable;
+
+public class ConsultaMatriculaBean implements Serializable {
+
+}

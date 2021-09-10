@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pe.gafahsoft.colegio.bean.ConsultaMatriculaBean&apos; to &apos;MatriculadosBean&apos;&#x0D;&#x0A;- Original project: &apos;colegio-modelo&apos;&#x0D;&#x0A;- Original element: &apos;pe.gafahsoft.colegio.bean.ConsultaMatriculaBean&apos;&#x0D;&#x0A;- Renamed element: &apos;pe.gafahsoft.colegio.bean.MatriculadosBean&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConsultaMatriculaBean&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pe.gafahsoft.colegio.bean{ConsultaMatriculaBean.java[ConsultaMatriculaBean" matchStrategy="1" name="MatriculadosBean" qualified="false" references="true" similarDeclarations="false" stamp="1471895321994" textual="false" version="1.0"/>
+</session>
